@@ -1,9 +1,13 @@
+Financial Article Research Assistant
+Technologies: LangChain, OpenAI, FAISS, Streamlit
 
-# RockyBot: News Research Tool 
+• Developed a research tool for analyzing financial articles by uploading URLs or text files, enabling flexible content input.
+• Employed LangChain’s UnstructuredURLLoader to extract and preprocess content from web pages seamlessly.
+• Leveraged OpenAI embeddings to transform textual data into high-dimensional vectors for semantic understanding.
+• Implemented FAISS for fast, similarity-based information retrieval, enabling efficient document chunk searching.
+• Integrated a ChatGPT-powered query system to allow users to ask questions and receive intelligent, context-aware answers.
+• Built a clean and intuitive Streamlit interface to support real-time interaction, file handling, and dynamic responses.
 
-RockyBot is a user-friendly news research tool designed for effortless information retrieval. Users can input article URLs and ask questions to receive relevant insights from the stock market and financial domain.
-
-![](rockybot.jpg)
 
 ## Features
 
@@ -18,7 +22,7 @@ RockyBot is a user-friendly news research tool designed for effortless informati
 1.Clone this repository to your local machine using:
 
 ```bash
-  git clone https://github.com/codebasics/langchain.git
+  git clone https://github.com/aaryjoshi/Insightly.git
 ```
 2.Navigate to the project directory:
 
