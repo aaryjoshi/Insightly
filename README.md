@@ -26,10 +26,24 @@ The **Financial Article Research Assistant** enables users to explore, analyze, 
 1. **Clone the repository**
 ```bash
 git clone https://github.com/aaryjoshi/Insightly.git
-cd 2_news_research_tool_project
 
+Install dependencies
+bash
+Set your API key
+Create a .env file in the project root and add:
 
-- main.py: The main Streamlit application script.
-- requirements.txt: A list of required Python packages for the project.
-- faiss_store_openai.pkl: A pickle file to store the FAISS index.
-- .env: Configuration file for storing your OpenAI API key.
+env
+Copy
+Edit
+Gemini_Api_key=your_gemini_api_key
+▶️ Running the App
+bash
+Copy
+Edit
+streamlit run main.py
+Use the sidebar to input URLs.
+
+Click "Process URLs" to start processing.
+
+Ask questions in the prompt box and receive answers with source URLs.
+
