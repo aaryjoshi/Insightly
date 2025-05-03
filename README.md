@@ -1,67 +1,33 @@
-Financial Article Research Assistant
-Technologies: LangChain, OpenAI, FAISS, Streamlit
+# 🧠 Financial Article Research Assistant
 
-• Developed a research tool for analyzing financial articles by uploading URLs or text files, enabling flexible content input.
-• Employed LangChain’s UnstructuredURLLoader to extract and preprocess content from web pages seamlessly.
-• Leveraged OpenAI embeddings to transform textual data into high-dimensional vectors for semantic understanding.
-• Implemented FAISS for fast, similarity-based information retrieval, enabling efficient document chunk searching.
-• Integrated a ChatGPT-powered query system to allow users to ask questions and receive intelligent, context-aware answers.
-• Built a clean and intuitive Streamlit interface to support real-time interaction, file handling, and dynamic responses.
+An AI-powered research tool for analyzing financial news articles with ease and intelligence.
 
+## 🚀 Overview
 
-## Features
+The **Financial Article Research Assistant** enables users to explore, analyze, and query financial news content from online URLs or uploaded files. Built with modern NLP tools like LangChain, OpenAI Embeddings, and FAISS, this project lets users retrieve context-aware answers from articles via a Streamlit interface.
 
-- Load URLs or upload text files containing URLs to fetch article content.
-- Process article content through LangChain's UnstructuredURL Loader
-- Construct an embedding vector using OpenAI's embeddings and leverage FAISS, a powerful similarity search library, to enable swift and effective retrieval of relevant information
-- Interact with the LLM's (Chatgpt) by inputting queries and receiving answers along with source URLs.
+## 🛠️ Technologies Used
 
+- **LangChain** – For chaining document loading, processing, and querying.
+- **OpenAI Embeddings** – To convert textual content into meaningful vector representations.
+- **FAISS** – A powerful vector store for fast similarity-based retrieval.
+- **Streamlit** – For creating an interactive and user-friendly web interface.
 
-## Installation
+## ✨ Features
 
-1.Clone this repository to your local machine using:
+- 🔗 **URL & File Support**: Upload a `.txt` file of URLs or paste URLs directly to ingest content.
+- 📄 **Content Extraction**: Uses LangChain's `UnstructuredURLLoader` for seamless article loading and cleaning.
+- 🧠 **Embeddings & Indexing**: Embeds content using OpenAI and indexes it with FAISS for fast semantic search.
+- 💬 **Intelligent Q&A**: Ask context-aware questions and receive relevant answers grounded in your article data.
+- 💾 **Local Storage**: Embeddings are stored in a FAISS index (`.pkl` file) for efficient reusability.
 
+## 📦 Installation
+
+1. **Clone the repository**
 ```bash
-  git clone https://github.com/aaryjoshi/Insightly.git
-```
-2.Navigate to the project directory:
+git clone https://github.com/aaryjoshi/Insightly.git
+cd 2_news_research_tool_project
 
-```bash
-  cd 2_news_research_tool_project
-```
-3. Install the required dependencies using pip:
-
-```bash
-  pip install -r requirements.txt
-```
-4.Set up your OpenAI API key by creating a .env file in the project root and adding your API
-
-```bash
-  OPENAI_API_KEY=your_api_key_here
-```
-## Usage/Examples
-
-1. Run the Streamlit app by executing:
-```bash
-streamlit run main.py
-
-```
-
-2.The web app will open in your browser.
-
-- On the sidebar, you can input URLs directly.
-
-- Initiate the data loading and processing by clicking "Process URLs."
-
-- Observe the system as it performs text splitting, generates embedding vectors, and efficiently indexes them using FAISS.
-
-- The embeddings will be stored and indexed using FAISS, enhancing retrieval speed.
-
-- The FAISS index will be saved in a local file path in pickle format for future use.
-- One can now ask a question and get the answer based on those news articles
-
-
-## Project Structure
 
 - main.py: The main Streamlit application script.
 - requirements.txt: A list of required Python packages for the project.
