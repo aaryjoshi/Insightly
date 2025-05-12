@@ -33,13 +33,13 @@ Built with **LangChain**, **OpenAI**, **FAISS**, and **Streamlit**, this assista
    pip install -r requirements.txt
    ```
 
-3. **Configure OpenAI API Key**
+3. **Configure API Key**
 
    * Create a `.env` file in the root directory.
    * Add your API key:
 
      ```bash
-     OPENAI_API_KEY=your_api_key_here
+     Gemini_Api_keys=your_api_key_here
      ```
 
 4. **Run the application**
