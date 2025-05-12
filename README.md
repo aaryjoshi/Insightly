@@ -1,69 +1,71 @@
-Financial Article Research Assistant
-Technologies: LangChain, OpenAI, FAISS, Streamlit
+# Financial Article Research Assistant
 
-• Developed a research tool for analyzing financial articles by uploading URLs or text files, enabling flexible content input.
-• Employed LangChain’s UnstructuredURLLoader to extract and preprocess content from web pages seamlessly.
-• Leveraged OpenAI embeddings to transform textual data into high-dimensional vectors for semantic understanding.
-• Implemented FAISS for fast, similarity-based information retrieval, enabling efficient document chunk searching.
-• Integrated a ChatGPT-powered query system to allow users to ask questions and receive intelligent, context-aware answers.
-• Built a clean and intuitive Streamlit interface to support real-time interaction, file handling, and dynamic responses.
-
+A research tool designed to analyze financial articles by ingesting URLs or text files and enabling intelligent, context-aware interactions.
+Built with **LangChain**, **OpenAI**, **FAISS**, and **Streamlit**, this assistant streamlines the exploration of financial content using advanced NLP and retrieval systems.
 
 ## Features
 
-- Load URLs or upload text files containing URLs to fetch article content.
-- Process article content through LangChain's UnstructuredURL Loader
-- Construct an embedding vector using OpenAI's embeddings and leverage FAISS, a powerful similarity search library, to enable swift and effective retrieval of relevant information
-- Interact with the LLM's (Chatgpt) by inputting queries and receiving answers along with source URLs.
+* 🌐 **Flexible Input**: Load articles from URLs or upload text files containing URLs.
+* 🔍 **Smart Preprocessing**: Seamless extraction and preprocessing via LangChain’s `UnstructuredURLLoader`.
+* 🧠 **Semantic Understanding**: Convert articles into high-dimensional vectors using OpenAI embeddings.
+* ⚡ **Efficient Retrieval**: Perform similarity-based document search using FAISS for fast, accurate results.
+* 🤖 **LLM-Powered Q\&A**: Ask ChatGPT questions and receive intelligent, source-aware answers.
+* 🖥 **Intuitive UI**: Streamlit interface for real-time interaction, file handling, and dynamic user experience.
 
+## Tech Stack
 
-## Installation
+* **NLP & Retrieval**: LangChain, OpenAI Embeddings, FAISS
+* **Interface**: Streamlit
+* **LLM Integration**: OpenAI ChatGPT
 
-1.Clone this repository to your local machine using:
+## Setup Instructions
 
-```bash
-  git clone https://github.com/aaryjoshi/Insightly.git
-```
-2.Navigate to the project directory:
+1. **Clone the repository**
 
-```bash
-  cd 2_news_research_tool_project
-```
-3. Install the required dependencies using pip:
+   ```bash
+   git clone https://github.com/aaryjoshi/Insightly.git
+   cd 2_news_research_tool_project
+   ```
 
-```bash
-  pip install -r requirements.txt
-```
-4.Set up your OpenAI API key by creating a .env file in the project root and adding your API
+2. **Install dependencies**
 
-```bash
-  OPENAI_API_KEY=your_api_key_here
-```
-## Usage/Examples
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-1. Run the Streamlit app by executing:
-```bash
-streamlit run main.py
+3. **Configure OpenAI API Key**
 
-```
+   * Create a `.env` file in the root directory.
+   * Add your API key:
 
-2.The web app will open in your browser.
+     ```bash
+     OPENAI_API_KEY=your_api_key_here
+     ```
 
-- On the sidebar, you can input URLs directly.
+4. **Run the application**
 
-- Initiate the data loading and processing by clicking "Process URLs."
+   ```bash
+   streamlit run main.py
+   ```
 
-- Observe the system as it performs text splitting, generates embedding vectors, and efficiently indexes them using FAISS.
+## Usage
 
-- The embeddings will be stored and indexed using FAISS, enhancing retrieval speed.
+* Open the app in your browser.
+* Use the sidebar to enter URLs or upload a file with multiple URLs.
+* Click “Process URLs” to:
 
-- The FAISS index will be saved in a local file path in pickle format for future use.
-- One can now ask a question and get the answer based on those news articles
-
+  * Extract and split the text.
+  * Generate embeddings.
+  * Index using FAISS (saved as a `.pkl` file).
+* Ask questions based on the indexed content and receive precise answers with source references.
 
 ## Project Structure
 
-- main.py: The main Streamlit application script.
-- requirements.txt: A list of required Python packages for the project.
-- faiss_store_openai.pkl: A pickle file to store the FAISS index.
-- .env: Configuration file for storing your OpenAI API key.
+* `main.py`: Main Streamlit app script.
+* `requirements.txt`: Python dependencies.
+* `faiss_store_openai.pkl`: Saved FAISS index for future retrieval.
+* `.env`: API key configuration file.
+
+---
+
+Would you like this saved to a file or converted into a README for your GitHub repo?
