@@ -1,69 +1,76 @@
-# Financial Article Research Assistant
+# 🧠 Insightly: AI-Powered News Analysis with Gemini + LangChain + React
 
-A research tool designed to analyze financial articles by ingesting URLs or text files and enabling intelligent, context-aware interactions.
-Built with **LangChain**, **Gemini**, **FAISS**, this assistant streamlines the exploration of financial content using advanced NLP and retrieval systems.
+![Project Banner](https://img.shields.io/badge/LLM-Gemini-blue?style=for-the-badge)
+![Built With](https://img.shields.io/badge/Built%20With-React%20%7C%20LangChain%20%7C%20FAISS%20%7C%20Gemini-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
-## Features
-
-* 🌐 **Flexible Input**: Load articles from URLs or upload text files containing URLs.
-* 🔍 **Smart Preprocessing**: Seamless extraction and preprocessing via LangChain’s `UnstructuredURLLoader`.
-* 🧠 **Semantic Understanding**: Convert articles into high-dimensional vectors using OpenAI embeddings.
-* ⚡ **Efficient Retrieval**: Perform similarity-based document search using FAISS for fast, accurate results.
-* 🤖 **LLM-Powered Q\&A**: Ask ChatGPT questions and receive intelligent, source-aware answers.
-* 🖥 **Intuitive UI**: Streamlit interface for real-time interaction, file handling, and dynamic user experience.
-
-## Tech Stack
-
-* **NLP & Retrieval**: LangChain, OpenAI Embeddings, FAISS
-* **Interface**: Streamlit
-* **LLM Integration**: OpenAI ChatGPT
-
-## Setup Instructions
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/aaryjoshi/Insightly.git
-   cd 2_news_research_tool_project
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Configure API Key**
-
-   * Create a `.env` file in the root directory.
-   * Add your API key:
-
-     ```bash
-     Gemini_Api_keys=your_api_key_here
-     ```
-
-4. **Run the application**
-
-   ```bash
-   streamlit run main.py
-   ```
-
-## Usage
-
-* Open the app in your browser.
-* Use the sidebar to enter URLs or upload a file with multiple URLs.
-* Click “Process URLs” to:
-
-  * Extract and split the text.
-  * Generate embeddings.
-  * Index using FAISS (saved as a `.pkl` file).
-* Ask questions based on the indexed content and receive precise answers with source references.
-
-## Project Structure
-
-* `main.py`: Main Streamlit app script.
-* `requirements.txt`: Python dependencies.
-* `faiss_store_openai.pkl`: Saved FAISS index for future retrieval.
-* `.env`: API key configuration file.
+> **Insightly** is an intelligent RAG-based application that scrapes financial news from the web, embeds them using HuggingFace transformers, and enables natural language querying via Google's Gemini LLM — all wrapped in a modern and interactive **React** frontend.
 
 ---
+
+## 🚀 Features
+
+- 🔍 **Real-time Web Scraping** of news articles from URLs
+- 🧩 **Text Chunking & Embedding** via HuggingFace + FAISS
+- 🔄 **RAG Pipeline** powered by LangChain + Gemini Flash
+- 💬 **Natural Language Q&A** with source attribution
+- 🌐 **React Frontend** with a sleek, responsive UI
+- ⚡ **Fast Retrieval** with local vector index
+
+---
+
+## 🧠 Architecture Overview
+
+```mermaid
+graph TD
+  A[Web Scraper] --> B[Text Chunking & Embedding]
+  B --> C[FAISS Vector Store]
+  C --> D[Retriever]
+  D --> E[Gemini LLM via LangChain]
+  E --> F[Answer + Sources]
+  F --> G[React Frontend]
+
+
+🛠️ Tech Stack
+| Layer          | Tools / Libraries                             |
+| -------------- | --------------------------------------------- |
+| **Frontend**   | React.js, TailwindCSS                         |
+| **Backend**    | Python, LangChain, FAISS                      |
+| **LLM**        | Gemini 2.0 Flash via `langchain-google-genai` |
+| **Embeddings** | Hugging Face Sentence Transformers            |
+| **Vector DB**  | FAISS (in-memory, local)                      |
+| **Deployment** | Local / Coming Soon: Cloud                    |
+
+🔧 Installation
+🐍 Backend Setup
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/insightly.git
+cd insightly/backend
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # or venv\Scripts\activate on Windows
+
+# Install dependencies
+pip install -r requirements.txt
+⚠️ Add your Google API key to your environment:
+
+bash
+Copy
+Edit
+export GOOGLE_API_KEY=your_api_key
+🧠 Run the RAG System
+bash
+Copy
+Edit
+python query.py
+🌐 Frontend Setup
+bash
+Copy
+Edit
+cd ../frontend
+npm install
+npm start
+Ensure the backend is running before querying via the frontend.
