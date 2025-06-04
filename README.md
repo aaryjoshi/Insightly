@@ -1,7 +1,7 @@
 # Financial Article Research Assistant
 
 A research tool designed to analyze financial articles by ingesting URLs or text files and enabling intelligent, context-aware interactions.
-Built with **LangChain**, **OpenAI**, **FAISS**, and **Streamlit**, this assistant streamlines the exploration of financial content using advanced NLP and retrieval systems.
+Built with **LangChain**, **Gemini**, **FAISS**, this assistant streamlines the exploration of financial content using advanced NLP and retrieval systems.
 
 ## Features
 
@@ -67,5 +67,3 @@ Built with **LangChain**, **OpenAI**, **FAISS**, and **Streamlit**, this assista
 * `.env`: API key configuration file.
 
 ---
-
-Would you like this saved to a file or converted into a README for your GitHub repo?
