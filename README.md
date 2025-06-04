@@ -33,63 +33,6 @@
 | **Deployment** | Local / Coming Soon: Cloud                    |
 
 
-🔧 Installation
-🐍 Backend Setup
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/insightly.git
-cd insightly/backend
 
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-
-# Install dependencies
-pip install -r requirements.txt
-⚠️ Add your Google API key to your environment:
-
-bash
-Copy
-Edit
-export GOOGLE_API_KEY=your_api_key
-🧠 Run the RAG System
-bash
-Copy
-Edit
-python query.py
-🌐 Frontend Setup
-bash
-Copy
-Edit
-cd ../frontend
-npm install
-npm start
-Ensure the backend is running before querying via the frontend.
-
-📁 Project Structure
-csharp
-Copy
-Edit
-insightly/
-├── backend/
-│   ├── query.py               # Runs RAG pipeline
-│   ├── vector_index.pkl       # Precomputed FAISS index
-│   ├── rag_pipeline.py        # Central RAG setup
-│   └── requirements.txt
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── package.json
-└── README.md
-🧪 Example Query
-python
-Copy
-Edit
-from rag_pipeline import ask_question
-
-response = ask_question("What did India ban? Explain the situation in brief.")
-print(response["answer"])
-print("Sources:", response["sources"])
 
 
