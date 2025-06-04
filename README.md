@@ -21,14 +21,7 @@
 
 ## 🧠 Architecture Overview
 
-```mermaid
-graph TD
-  A[Web Scraper] --> B[Text Chunking & Embedding]
-  B --> C[FAISS Vector Store]
-  C --> D[Retriever]
-  D --> E[Gemini LLM via LangChain]
-  E --> F[Answer + Sources]
-  F --> G[React Frontend]
+
 
 
 🛠️ Tech Stack
