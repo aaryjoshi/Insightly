@@ -53,20 +53,20 @@
 
 3. **Run backend modules (in order)**
 
-    - Build the FAISS vector index
-      ```bash
-      python index_builder.py
-      ```
+- Build the FAISS vector index
+  ```bash
+  python index_builder.py
+  ```
 
-    - Load Gemini LLM and initialize chain
-      ```bash
-      python llm_model.py
-      ```
+- Load Gemini LLM and initialize chain
+  ```bash
+  python llm_model.py
+  ```
 
-    - Query the model
-      ```bash
-      python query.py
-      ```
+- Query the model
+  ```bash
+  python query.py
+  ```
 
 4. **Set up the frontend**
     ```bash
