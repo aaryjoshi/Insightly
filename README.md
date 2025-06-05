@@ -35,64 +35,46 @@
 
 
 
-⚙️ Setup Instructions
-🔧 1. Backend Setup (Python)
-The backend is responsible for scraping articles, building the FAISS vector index, embedding using HuggingFace models, and querying with Gemini via LangChain.
+## ⚙️ Getting Started
 
-1.1 Clone the repository
-bash
-Copy
-Edit
-git clone https://github.com/YOUR_USERNAME/insightly.git
-cd insightly/backend
+1. **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/insightly.git
+    cd insightly
+    ```
 
-1.2 Create a virtual environment (optional but recommended)
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-1.3 Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-1.4 Run the backend modules in order
-Step 1: Build vector index from scraped articles
+2. **Set up the backend**
+    ```bash
+    cd backend
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    pip install -r requirements.txt
+    ```
 
-bash
-Copy
-Edit
-python index_builder.py
-Step 2: Load the index and set up the LLM model
+3. **Run backend modules (in order)**
 
-bash
-Copy
-Edit
-python llm_model.py
-Step 3: Run the query interface
+    - Build the FAISS vector index
+      ```bash
+      python index_builder.py
+      ```
 
-bash
-Copy
-Edit
-python query.py
-✅ Tip: You can wrap all of this into a FastAPI/Flask backend later to make it queryable from the React frontend.
+    - Load Gemini LLM and initialize chain
+      ```bash
+      python llm_model.py
+      ```
 
-🌐 2. Frontend Setup (React)
-The frontend is a sleek and responsive UI built with React + Tailwind for interacting with the AI system.
+    - Query the model
+      ```bash
+      python query.py
+      ```
 
-2.1 Navigate to the frontend folder
-bash
-Copy
-Edit
-cd ../frontend
-2.2 Install dependencies
-bash
-Copy
-Edit
-npm install
-2.3 Start the React app
-bash
-Copy
-Edit
-npm start
+4. **Set up the frontend**
+    ```bash
+    cd ../frontend
+    npm install
+    ```
+
+5. **Run the application**
+    ```bash
+    npm start
+    ```
